@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  Twitter
 //
-//  Created by Trish Truong on 9/29/22.
+//  Created by Matthew Nguyen on 9/29/22.
 //  Copyright © 2022 Dan. All rights reserved.
 //
 
@@ -10,17 +10,22 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBAction func onLoginButton(_ sender: Any) {
+    // once view appears, run this code
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "userLoggedIn") == true {
+            self.performSegue(withIdentifier: "loginToHome", sender: self)
+        }
+    }
     
-        // action takes user to log in, on success performs
-        // segue to home screen, on failure prints error message
+    @IBAction func onLoginButton(_ sender: Any) {
+        
         let myUrl = "https://api.twitter.com/oauth/request_token"
         
         TwitterAPICaller.client?.login(url: myUrl, success: {
-            UserDefaults.standard.set(true, forKey: "userLoggedIn")
+            UserDefaults.standard.set(true, forKey: "userLoggedIn") // set userLoggedIn key to True
             self.performSegue(withIdentifier: "loginToHome", sender: self)
         }, failure: { Error in
-            print("could not successfully log in.")
+            print("Could not log in")
         })
     }
     
@@ -28,12 +33,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if UserDefaults.standard.bool(forKey: "userLoggedIn") == true {
-            self.performSegue(withIdentifier: "loginToHome", sender: self)
-        }
     }
     
 

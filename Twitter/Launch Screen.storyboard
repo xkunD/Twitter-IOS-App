@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,15 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Twitter_Logo_Blue-1" translatesAutoresizingMaskIntoConstraints="NO" id="5pj-oc-PFh">
-                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TwitterLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="qAx-rF-tQn">
+                                <rect key="frame" x="67" y="83" width="240" height="200.5"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="notTwitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnG-N1-jvg">
+                                <rect key="frame" x="92" y="309.5" width="191.5" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5pj-oc-PFh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="YBp-79-rXp"/>
-                            <constraint firstItem="5pj-oc-PFh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vd9-pO-IWB"/>
+                            <constraint firstItem="ZnG-N1-jvg" firstAttribute="top" secondItem="qAx-rF-tQn" secondAttribute="bottom" constant="26" id="0F0-d5-C1t"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="qAx-rF-tQn" secondAttribute="trailing" constant="68" id="7XY-9G-teE"/>
+                            <constraint firstItem="ZnG-N1-jvg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Rv6-iq-KNo"/>
+                            <constraint firstItem="ZnG-N1-jvg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jIp-5b-aBn"/>
+                            <constraint firstItem="qAx-rF-tQn" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="83" id="wjy-14-bQs"/>
+                            <constraint firstItem="qAx-rF-tQn" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="67" id="xw9-TM-YvF"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +44,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Twitter_Logo_Blue-1" width="200" height="200"/>
+        <image name="TwitterLogoBlue" width="200" height="200"/>
     </resources>
 </document>
