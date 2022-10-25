@@ -1,10 +1,8 @@
 # Project 3 - *Twitter*
 
-**TrishTimeLine** is a basic twitter app to read your tweets.
+This is a basic twitter app to view, compose, favorite, and retweet tweets.
 
 # Twitter - Part II
-
-This is a basic twitter app to view, compose, favorite, and retweet tweets.
 
 Time spent: **3** hours spent in total
 
